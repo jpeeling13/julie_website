@@ -28,14 +28,14 @@
 }
 
 .splashHandshake{
-  height: 500px;
+  height: 450px;
   width:100%;
   background-image: url("/splash_handshake.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   text-align:center;
-  line-height:500px;
+  line-height:450px;
 }
 
 .splashPageTitle{
