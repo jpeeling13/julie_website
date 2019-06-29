@@ -17,7 +17,7 @@
 }
 
 
-.App-body {
+.pageBody {
   background-color: #D6E3F8;
   min-height: 100vh;
   display: flex;
@@ -39,12 +39,8 @@
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position:50% 50%;
   filter: blur(3px);
-}
-
-.splashHandshake{
-  background-image: url("/splash_handshake.jpg");
 }
 
 .splashText{
@@ -57,6 +53,17 @@
   text-align: center;
   z-index: 2;
   font-family: SplashHeader;
+}
+
+.pageContent{
+  margin-top: 100px;
+}
+
+.pageContentTitle{
+  font-family: SplashHeader;
+  font-size: 20px;
+  font-weight:bold;
+  margin-bottom: 10px;
 }
 
 @font-face {
@@ -74,6 +81,9 @@ White: #D6E3F8
 Black: #242331
 Dark Blue: #2E294E
 
-Logo URL: logomakr.com/4OJCjO
+Logo URLs: 
+
+logomakr.com/4OJCjO
+logomakr.com/811q7v
 
 */
