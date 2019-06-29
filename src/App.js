@@ -8,12 +8,13 @@ function App() {
     <Router>
       <Route path="/" component={TopNav} />
       <div className="App-body">
-        <div className="splashHandshake">
-        <h1 className="splashPageTitle">About Julie East</h1>
+        <div className="splashContainer">
+          <div className="splashImage splashHandshake" />
+          <div className="splashText">
+            <h1>Julie East HR</h1>
+            <p>Coming Soon</p>
+          </div>
         </div>
-        <p>
-          Julie East HR Website Coming Soon...
-        </p>
       </div>
     </Router>
   );
