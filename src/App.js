@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {HashRouter as Router, Route} from "react-router-dom";
 import TopNav from "./components/TopNav.js";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <Route path="/" component={TopNav} />
       <div className="App-body">
         <div className="splashContainer">
