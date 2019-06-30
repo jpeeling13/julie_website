@@ -16,7 +16,7 @@ function App() {
           {
             (props) => <InfoPage 
               {...props} 
-              pageImage="/splash_leaf.jpg" 
+              pageImage="/splash_leaf_cmp.jpg" 
               pageTitle="About" 
               pageSubtitle="Julie East" 
               pageContentInfo={AllPageContents.ABOUT_PAGE_INFO}/>
@@ -29,7 +29,7 @@ function App() {
           {
             (props) => <InfoPage 
               {...props} 
-              pageImage="/splash_hand_shake.jpg" 
+              pageImage="/splash_hand_shake_cmp.jpg" 
               pageTitle="Testimonials" 
               pageSubtitle="" 
               pageContentInfo={AllPageContents.TESTIMONIALS_PAGE_INFO}/>
@@ -42,7 +42,7 @@ function App() {
           {
             (props) => <InfoPage 
               {...props} 
-              pageImage="/splash_hand_shake.jpg" 
+              pageImage="/splash_hand_shake_cmp.jpg" 
               pageTitle="Coming Soon..." 
               pageSubtitle="" 
               pageContentInfo={<p>coming soon...</p>}/>
@@ -55,7 +55,7 @@ function App() {
           {
             (props) => <InfoPage 
               {...props} 
-              pageImage="/splash_coffee_cup.jpg" 
+              pageImage="/splash_coffee_cup_cmp.jpg" 
               pageTitle="Contact" 
               pageSubtitle="" 
               pageContentInfo={<p>coming soon...</p>}/>

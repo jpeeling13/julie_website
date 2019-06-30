@@ -96,16 +96,6 @@
   text-transform: uppercase;
 }
 
-@font-face {
-  font-family: "SplashHeader";
-  src: local("SplashHeader"), url(./fonts/bavro-regular-webfont.woff) format("woff");
-}
-
-@font-face {
-  font-family: "SplashHeader2";
-  src: local("SplashHeader2"), url(./fonts/Assistant-ExtraBold.ttf) format("ttf");
-}
-
 
 
 /* 
