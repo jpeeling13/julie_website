@@ -2,15 +2,65 @@ import React from 'react';
 import './App.css';
 import {HashRouter as Router, Route} from "react-router-dom";
 import TopNav from "./components/TopNav.js";
-import AboutPage from "./components/AboutPage.js";
-import TestimonialsPage from "./components/TestimonialsPage.js";
+import InfoPage from "./components/InfoPage.js";
+import * as AllPageContents from "./AllPageContents.js";
 
 function App() {
   return (
     <Router basename="/">
       <Route path="/" component={TopNav} />
-      <Route path="/" exact component={AboutPage} />
-      <Route path="/testimonials" exact component={TestimonialsPage} />
+
+      <Route 
+        path="/" exact 
+        render=
+          {
+            (props) => <InfoPage 
+              {...props} 
+              pageImage="/splash_leaf.jpg" 
+              pageTitle="About" 
+              pageSubtitle="Julie East" 
+              pageContentInfo={AllPageContents.ABOUT_PAGE_INFO}/>
+          } 
+      />
+
+      <Route 
+        path="/testimonials" exact 
+        render=
+          {
+            (props) => <InfoPage 
+              {...props} 
+              pageImage="/splash_hand_shake.jpg" 
+              pageTitle="Testimonials" 
+              pageSubtitle="" 
+              pageContentInfo={AllPageContents.TESTIMONIALS_PAGE_INFO}/>
+          } 
+      />      
+
+      <Route 
+        path="/resourcelinkone" exact 
+        render=
+          {
+            (props) => <InfoPage 
+              {...props} 
+              pageImage="/splash_hand_shake.jpg" 
+              pageTitle="Coming Soon..." 
+              pageSubtitle="" 
+              pageContentInfo={<p>coming soon...</p>}/>
+          } 
+      />
+
+      <Route 
+        path="/contact" exact 
+        render=
+          {
+            (props) => <InfoPage 
+              {...props} 
+              pageImage="/splash_coffee_cup.jpg" 
+              pageTitle="Contact" 
+              pageSubtitle="" 
+              pageContentInfo={<p>coming soon...</p>}/>
+          } 
+      />
     </Router>
   );
 }

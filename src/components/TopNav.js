@@ -12,7 +12,8 @@ import {
     Dropdown,
     DropdownToggle,
     DropdownMenu,
-    DropdownItem } from 'reactstrap';
+    DropdownItem,
+    Button } from 'reactstrap';
 
 class TopNav extends Component {
 
@@ -56,12 +57,12 @@ class TopNav extends Component {
             case "/resourcelinktwo":
             case "/resourcelinkthree":
             {
-                document.getElementById("resourceDropDown").className = "activeNavLink";
+                document.getElementById("resourceDropDown").className = "navLink nav-link activeNavLink";
                 break;
             }
 
             default:{
-                document.getElementById("resourceDropDown").className = "inactiveNavLink";
+                document.getElementById("resourceDropDown").className = "navLink nav-link";
                 console.log("Got here");
             }
         }
@@ -77,28 +78,31 @@ class TopNav extends Component {
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <NavLink tag={RRNavLink} className="inactiveNavLink" activeClassName="activeNavLink" to="/" exact>About</NavLink>
+                    <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/" exact>About</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink tag={RRNavLink} className="inactiveNavLink" activeClassName="activeNavLink" to="/testimonials">Testimonials</NavLink>
+                    <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/testimonials">Testimonials</NavLink>
                   </NavItem>
                   <Dropdown nav inNavbar onMouseOver={this.onMouseEnter} onMouseLeave={this.onMouseLeave} isOpen={this.state.dropDownIsOpen} toggle={this.toggleDropdown}>
-                    <DropdownToggle nav>
-                        <span id="resourceDropDown" className="inactiveNavLink">Resources</span>
+                    <DropdownToggle nav id="resourceDropDown" className="navLink">
+                        <span>Resources</span>
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem>
-                        <NavLink tag={RRNavLink} className="inactiveNavLink" activeClassName="activeNavLink" to="/resourcelinkone">Resource Link One</NavLink>
+                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/resourcelinkone">Resource Link One</NavLink>
                       </DropdownItem>
                       <DropdownItem>
-                        <NavLink tag={RRNavLink} className="inactiveNavLink" activeClassName="activeNavLink" to="/resourcelinktwo">Resource Link Two</NavLink>
+                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/resourcelinktwo">Resource Link Two</NavLink>
                       </DropdownItem>
                       <DropdownItem divider />
                       <DropdownItem>
-                        <NavLink tag={RRNavLink} className="inactiveNavLink" activeClassName="activeNavLink" to="/resourcelinkthree">Resource Link Three</NavLink>
+                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/resourcelinkthree">Resource Link Three</NavLink>
                       </DropdownItem>
                     </DropdownMenu>
                   </Dropdown>
+                  <NavItem>
+                    <NavLink tag={RRNavLink} className="navLink" id="contact_link" to="/contact"><span id="contact_link_button">Contact</span></NavLink>
+                  </NavItem>
                 </Nav>
               </Collapse>
             </Navbar>

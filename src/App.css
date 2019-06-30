@@ -2,9 +2,14 @@
   text-align: center;
 }
 
-.inactiveNavLink{
+.navLink{
   color: #242331 !important;
-  font-weight: bold;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
 }
 
 .inactiveNavLink:hover{
@@ -16,6 +21,23 @@
   font-weight: bold;
 }
 
+#contact_link_button{
+  border: 1px solid #2E294E;
+  padding: 10px;
+}
+
+#contact_link_button:hover{
+  border: 1px solid #0071AA;
+  background-color: #0071AA;
+  color: white !important;
+}
+
+@media(max-width: 767px){
+  #contact_link{
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
+}
 
 .pageBody {
   background-color: #D6E3F8;
@@ -32,6 +54,7 @@
   height: 450px;
   width:100%;
   text-align:center;
+  overflow: hidden;
 }
 
 .splashImage{
@@ -41,6 +64,7 @@
   background-repeat: no-repeat;
   background-position:50% 50%;
   filter: blur(3px);
+  transform: scale(1.1);
 }
 
 .splashText{
@@ -52,7 +76,13 @@
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 2;
-  font-family: SplashHeader;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+}
+
+.splashText > h1 {
+  font-size: 30px;
+  padding: 5px;
 }
 
 .pageContent{
@@ -60,16 +90,22 @@
 }
 
 .pageContentTitle{
-  font-family: SplashHeader;
+  font-family: 'Raleway', sans-serif;
   font-size: 20px;
-  font-weight:bold;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 @font-face {
   font-family: "SplashHeader";
   src: local("SplashHeader"), url(./fonts/bavro-regular-webfont.woff) format("woff");
 }
+
+@font-face {
+  font-family: "SplashHeader2";
+  src: local("SplashHeader2"), url(./fonts/Assistant-ExtraBold.ttf) format("ttf");
+}
+
 
 
 /* 
