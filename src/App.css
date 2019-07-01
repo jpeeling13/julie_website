@@ -8,8 +8,8 @@
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-size: 15px;
-  padding-right: 1.5rem !important;
-  padding-left: 1.5rem !important;
+  padding-right: 1.0rem !important;
+  padding-left: 1.0rem !important;
 }
 
 .inactiveNavLink:hover{
@@ -92,8 +92,10 @@
 .pageContentTitle{
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-transform: uppercase;
+  text-align:left;
+
 }
 
 
@@ -107,9 +109,13 @@ White: #D6E3F8
 Black: #242331
 Dark Blue: #2E294E
 
-Logo URLs: 
+Logo URL - Long: 
+https://logomakr.com/83vPKQ
 
-logomakr.com/4OJCjO
-logomakr.com/811q7v
+Logo URL - Short Horizontal:
+https://logomakr.com/8J2KPm
+
+Logo URL - Really Short Vertical:
+https://logomakr.com/6ShPBR
 
 */

@@ -73,7 +73,7 @@ class TopNav extends Component {
         return (
             <div>
             <Navbar color="light" light expand="md">
-              <NavbarBrand href="/"><img src="/J_East_Logo.ico" style={{width:"75px"}}/></NavbarBrand>
+              <NavbarBrand href="/"><img src="/j_east_hr_logo_long.ico" style={{width:"250px"}}/></NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>

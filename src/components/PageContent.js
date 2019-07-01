@@ -13,6 +13,7 @@ class PageContent extends Component {
             <Container className="pageContent">
                 <Row>
                     <Col md="3" className="pageContentTitle">
+                        <img src="/j_east_hr_logo_short_vertical.ico" style={{height:"75px", marginBottom:"20px"}}/>
                         <p>{this.props.pageTitle}</p>
                         <p>{this.props.pageSubtitle}</p>
                     </Col>
