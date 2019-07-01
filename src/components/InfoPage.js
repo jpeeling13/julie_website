@@ -12,6 +12,9 @@ class InfoPage extends Component {
                     pageImage = {this.props.pageImage}
                     pageTitle = {this.props.pageTitle}
                     pageSubtitle = {this.props.pageSubtitle}
+                    showCta={this.props.showCta}
+                    ctaTitle={this.props.ctaTitle}
+                    ctaHref={this.props.ctaHref} 
                 />
 
                 <PageContent

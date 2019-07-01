@@ -1,34 +1,33 @@
-.App {
-  text-align: center;
+#navbar{
+  background-color: #F9EFEA !important;
 }
 
 .navLink{
-  color: #242331 !important;
+  color: #065143 !important;
   font-weight: 500;
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
+  font-family: 'Rubik', sans-serif;
   font-size: 15px;
   padding-right: 1.0rem !important;
   padding-left: 1.0rem !important;
 }
 
 .inactiveNavLink:hover{
-  color:#0071AA !important;
+  color:#129490 !important;
 }
 
 .activeNavLink{
-  color: #0071AA !important;
+  color: #129490 !important;
   font-weight: bold;
 }
 
 #contact_link_button{
-  border: 1px solid #2E294E;
+  border: 1px solid #065143;
   padding: 10px;
 }
 
 #contact_link_button:hover{
-  border: 1px solid #0071AA;
-  background-color: #0071AA;
+  border: 1px solid #129490;
+  background-color: #129490;
   color: white !important;
 }
 
@@ -40,13 +39,13 @@
 }
 
 .pageBody {
-  background-color: #D6E3F8;
+  background-color: #F9EFEA;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  color: #2E294E;
+  color: #065143;
 }
 
 .splashContainer{
@@ -68,54 +67,71 @@
 }
 
 .splashText{
-  color: white;
-  font-weight: bold;
+  color: #F9EFEA;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 2;
-  font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
+  font-family: 'Rubik', sans-serif;
 }
 
 .splashText > h1 {
-  font-size: 30px;
   padding: 5px;
+  font-weight: 500;
+}
+
+.splashTextTitle{
+  font-size: 50px;
+}
+
+.splashTextSubtitle{
+  font-size: 30px;
+}
+
+.splashCta{
+  color:white;
+  background-color: #CE1483 !important;
+  border-color: #CE1483 !important;
+}
+
+.splashCta:hover{
+  color: #CE1483 !important;
+  background-color: white !important;
+  border-color: #CE1483 !important;
 }
 
 .pageContent{
   margin-top: 100px;
 }
 
-.pageContentTitle{
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  text-align:left;
+.pageContentTitleWrapper{
+  text-align: inherit;
+}
 
+.pageContentTitle{
+  font-family: 'Rubik', sans-serif;
+  font-size: 15px;
+  margin-bottom: 15px;
+  text-align:center;
 }
 
 
 
 /* 
-App Pallette: https://coolors.co/0071aa-ff9b71-d6e3f8-242331-2e294e
+App Pallette: https://coolors.co/065143-129490-70b77e-e0a890-ce1483
 
-Blue: #0071AA
-Orange: #FF9B71
-White: #D6E3F8
-Black: #242331
-Dark Blue: #2E294E
+Dark Green: #065143
+Blue: #129490
+Light Green: #70B77E
+Pink: #F9EFEA
+Hot Pink: #CE1483
 
 Logo URL - Long: 
-https://logomakr.com/83vPKQ
-
-Logo URL - Short Horizontal:
-https://logomakr.com/8J2KPm
+https://logomakr.com/7w8PHr
 
 Logo URL - Really Short Vertical:
-https://logomakr.com/6ShPBR
+https://logomakr.com/3bBMyx
 
 */

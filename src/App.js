@@ -17,14 +17,17 @@ function App() {
             (props) => <InfoPage 
               {...props} 
               pageImage="/splash_leaf_cmp.jpg" 
-              pageTitle="About" 
-              pageSubtitle="Julie East" 
+              pageTitle="Julie East Freelance Consulting" 
+              pageSubtitle="Simple. Easy. Trustworthy."
+              showCta={true}
+              ctaTitle="Learn More"
+              ctaHref="#/contact"
               pageContentInfo={AllPageContents.ABOUT_PAGE_INFO}/>
           } 
       />
 
       <Route 
-        path="/testimonials" exact 
+        path="/Testimonials" exact 
         render=
           {
             (props) => <InfoPage 

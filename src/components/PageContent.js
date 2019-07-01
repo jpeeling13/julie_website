@@ -12,10 +12,12 @@ class PageContent extends Component {
         return (
             <Container className="pageContent">
                 <Row>
-                    <Col md="3" className="pageContentTitle">
-                        <img src="/j_east_hr_logo_short_vertical.ico" style={{height:"75px", marginBottom:"20px"}}/>
-                        <p>{this.props.pageTitle}</p>
-                        <p>{this.props.pageSubtitle}</p>
+                    <Col md="3" className="pageContentTitleWrapper">
+                        <div className="pageContentTitle">
+                            <img src="/jeast_hr_logo_tiny.ico" style={{height:"75px", marginBottom:"20px"}}/>
+                            <p>{this.props.pageTitle}</p>
+                            <p>{this.props.pageSubtitle}</p>
+                        </div>
                     </Col>
 
                     <Col md="9" className="pageContentInfo">

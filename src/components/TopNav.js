@@ -72,13 +72,13 @@ class TopNav extends Component {
     render() {
         return (
             <div>
-            <Navbar color="light" light expand="md">
-              <NavbarBrand href="/"><img src="/j_east_hr_logo_long.ico" style={{width:"250px"}}/></NavbarBrand>
+            <Navbar color="light" light expand="md" id="navbar">
+              <NavbarBrand href="/"><img src="/jeast_hr_logo_full.ico" style={{width:"250px"}}/></NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/" exact>About</NavLink>
+                    <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/" exact>Home</NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/testimonials">Testimonials</NavLink>
