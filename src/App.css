@@ -71,7 +71,7 @@
   width:100%;
   object-fit:cover;
   filter: blur(20px);
-  transition: opacity ease-in 200ms;
+  transition: opacity ease-in 300ms;
   transform: scale(1.1);
 }
 
