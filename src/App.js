@@ -16,7 +16,8 @@ function App() {
           {
             (props) => <InfoPage 
               {...props} 
-              pageImage="/splash_leaf_cmp.jpg" 
+              pageImage="/splash_leaf_cmp.jpg"
+              pageImageLowRes="/splash_leaf_cmp_low_res_1.jpg" 
               pageTitle="Julie East Freelance Consulting" 
               pageSubtitle="Simple. Easy. Trustworthy."
               showCta={true}
@@ -32,7 +33,8 @@ function App() {
           {
             (props) => <InfoPage 
               {...props} 
-              pageImage="/splash_hand_shake_cmp.jpg" 
+              pageImage="/splash_hand_shake_cmp.jpg"
+              pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg"  
               pageTitle="Testimonials" 
               pageSubtitle="" 
               pageContentInfo={AllPageContents.TESTIMONIALS_PAGE_INFO}/>
@@ -45,7 +47,8 @@ function App() {
           {
             (props) => <InfoPage 
               {...props} 
-              pageImage="/splash_hand_shake_cmp.jpg" 
+              pageImage="/splash_hand_shake_cmp.jpg"
+              pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg" 
               pageTitle="Coming Soon..." 
               pageSubtitle="" 
               pageContentInfo={<p>coming soon...</p>}/>
@@ -58,7 +61,8 @@ function App() {
           {
             (props) => <InfoPage 
               {...props} 
-              pageImage="/splash_coffee_cup_cmp.jpg" 
+              pageImage="/splash_coffee_cup_cmp.jpg"
+              pageImageLowRes="/splash_coffee_cup_cmp_low_res_1.jpg" 
               pageTitle="Contact" 
               pageSubtitle="" 
               pageContentInfo={<p>coming soon...</p>}/>

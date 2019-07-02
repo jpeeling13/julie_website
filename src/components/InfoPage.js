@@ -10,6 +10,7 @@ class InfoPage extends Component {
             <div className="pageBody">
                 <Splash 
                     pageImage = {this.props.pageImage}
+                    pageImageLowRes = {this.props.pageImageLowRes}
                     pageTitle = {this.props.pageTitle}
                     pageSubtitle = {this.props.pageSubtitle}
                     showCta={this.props.showCta}

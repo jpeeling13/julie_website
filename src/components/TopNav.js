@@ -41,13 +41,9 @@ class TopNav extends Component {
     };
 
     onMouseLeave = () => {
-        this.setState({
+          this.setState({
             dropDownIsOpen: false
-        });
-    }
-
-    componentDidMount() {
-        console.log(this.props.location.pathname);
+          });
     }
 
     componentDidUpdate(prevProps, prevState) {
