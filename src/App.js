@@ -4,6 +4,7 @@ import {HashRouter as Router, Route} from "react-router-dom";
 import TopNav from "./components/TopNav.js";
 import InfoPage from "./components/InfoPage.js";
 import * as AllPageContents from "./AllPageContents.js";
+import { FaCalendarAlt } from "react-icons/fa";
 
 function App() {
   return (
@@ -18,12 +19,29 @@ function App() {
               {...props} 
               pageImage="/splash_leaf_cmp.jpg"
               pageImageLowRes="/splash_leaf_cmp_low_res_1.jpg" 
-              pageTitle="Julie East Freelance Consulting" 
-              pageSubtitle="Simple. Easy. Trustworthy."
+              pageTitle="Intention HR and Julie East Consulting" 
+              pageSubtitle="Talent Strategy, Project Management, Engagement Planning"
+              pageContentTitle="Intention HR"
+              pageContentSubtitle=""
               showCta={true}
-              ctaTitle="Learn More"
+              ctaTitle="Schedule Consult"
               ctaHref="#/contact"
-              pageContentInfo={AllPageContents.ABOUT_PAGE_INFO}/>
+              ctaIcon= {FaCalendarAlt}
+              pageContentInfo={AllPageContents.HOME_PAGE_INFO}/>
+          } 
+      />     
+
+      <Route 
+        path="/services_overview" exact 
+        render=
+          {
+            (props) => <InfoPage 
+              {...props} 
+              pageImage="/splash_hand_shake_cmp.jpg"
+              pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg" 
+              pageTitle="Coming Soon..." 
+              pageSubtitle="" 
+              pageContentInfo={<p>coming soon...</p>}/>
           } 
       />
 
@@ -39,21 +57,7 @@ function App() {
               pageSubtitle="" 
               pageContentInfo={AllPageContents.TESTIMONIALS_PAGE_INFO}/>
           } 
-      />      
-
-      <Route 
-        path="/resourcelinkone" exact 
-        render=
-          {
-            (props) => <InfoPage 
-              {...props} 
-              pageImage="/splash_hand_shake_cmp.jpg"
-              pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg" 
-              pageTitle="Coming Soon..." 
-              pageSubtitle="" 
-              pageContentInfo={<p>coming soon...</p>}/>
-          } 
-      />
+      /> 
 
       <Route 
         path="/contact" exact 

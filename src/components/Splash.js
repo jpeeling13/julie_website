@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import {Button} from "reactstrap";
 
-
 class Splash extends Component {
 
     state = {
@@ -10,7 +9,8 @@ class Splash extends Component {
     }
 
     render() {
-        const { highResImageLoaded } = this.state;     
+        const { highResImageLoaded } = this.state;  
+        let ctaIcon = React.createElement(this.props.ctaIcon, null);   
         return (
             <div className="splashContainer">
               <img
@@ -32,7 +32,7 @@ class Splash extends Component {
                 <h1 className="splashTextSubtitle">{this.props.pageSubtitle}</h1>
                 {this.props.showCta == true &&
 
-                  <Button className="splashCta" href={this.props.ctaHref}>{this.props.ctaTitle}</Button>
+                  <Button className="splashCta" href={this.props.ctaHref}>{ctaIcon}{" " + this.props.ctaTitle}</Button>
 
                 }
               </div>

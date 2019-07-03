@@ -49,17 +49,19 @@ class TopNav extends Component {
     componentDidUpdate(prevProps, prevState) {
 
         switch (this.props.location.pathname){
-            case "/resourcelinkone":
-            case "/resourcelinktwo":
-            case "/resourcelinkthree":
+            case "/services_overview":
+            case "employee_relations":
+            case "/training_and_learing":
+            case "/talent_mangement":
+            case "/strategy":
+            case "/engagement_expertise":
             {
-                document.getElementById("resourceDropDown").className = "navLink nav-link activeNavLink";
+                document.getElementById("servicesDropdown").className = "navLink nav-link activeNavLink";
                 break;
             }
 
             default:{
-                document.getElementById("resourceDropDown").className = "navLink nav-link";
-                console.log("Got here");
+                document.getElementById("servicesDropdown").className = "navLink nav-link";
             }
         }
         
@@ -76,26 +78,34 @@ class TopNav extends Component {
                   <NavItem>
                     <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/" exact>Home</NavLink>
                   </NavItem>
-                  <NavItem>
-                    <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/testimonials">Testimonials</NavLink>
-                  </NavItem>
                   <Dropdown nav inNavbar onMouseOver={this.onMouseEnter} onMouseLeave={this.onMouseLeave} isOpen={this.state.dropDownIsOpen} toggle={this.toggleDropdown}>
-                    <DropdownToggle nav id="resourceDropDown" className="navLink">
-                        <span>Resources</span>
+                    <DropdownToggle nav id="servicesDropdown" className="navLink">
+                        <span>Services</span>
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem>
-                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/resourcelinkone">Resource Link One</NavLink>
+                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/services_overview" style={{fontWeight:"bold"}}>Overview</NavLink>
                       </DropdownItem>
                       <DropdownItem>
-                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/resourcelinktwo">Resource Link Two</NavLink>
+                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/employee_relations">Employee Relations</NavLink>
                       </DropdownItem>
-                      <DropdownItem divider />
                       <DropdownItem>
-                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/resourcelinkthree">Resource Link Three</NavLink>
+                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/training_and_learning">Training & Learning</NavLink>
+                      </DropdownItem>
+                      <DropdownItem>
+                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/Talent Management">Talent Management</NavLink>
+                      </DropdownItem>
+                      <DropdownItem>
+                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/strategy">Strategy</NavLink>
+                      </DropdownItem>
+                      <DropdownItem>
+                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/engagement_expertise">Engagement Expertise</NavLink>
                       </DropdownItem>
                     </DropdownMenu>
                   </Dropdown>
+                  <NavItem>
+                    <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/testimonials">Testimonials</NavLink>
+                  </NavItem>
                   <NavItem>
                     <NavLink tag={RRNavLink} className="navLink" id="contact_link" to="/contact"><span id="contact_link_button">Contact</span></NavLink>
                   </NavItem>

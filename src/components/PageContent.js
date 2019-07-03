@@ -15,8 +15,8 @@ class PageContent extends Component {
                     <Col md="3" className="pageContentTitleWrapper">
                         <div className="pageContentTitle">
                             <img src="/jeast_hr_logo_tiny.ico" style={{height:"75px", marginBottom:"20px"}}/>
-                            <p>{this.props.pageTitle}</p>
-                            <p>{this.props.pageSubtitle}</p>
+                            <p>{this.props.pageContentTitle}</p>
+                            <p>{this.props.pageContentSubtitle}</p>
                         </div>
                     </Col>
 
