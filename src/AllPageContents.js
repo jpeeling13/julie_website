@@ -4,6 +4,7 @@ import {FaInfo} from "react-icons/fa";
 
 export const HOME_PAGE_INFO = 
     <div>
+        <h4>What is Intention HR?</h4>
         <p>Intention is a mental state that represents a commitment to carrying out an action or actions in the future. Great employee experiences don’t just happen.  But with intention, they can. Grow your business and get better results through your people, with Intention HR.</p>
         <br />
         <h4>Who is Julie East?</h4>
