@@ -1,3 +1,45 @@
+body{
+  height: 100%;
+  position: relative;
+}
+
+#root{
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 125px;
+  background-color: #129490;
+ }
+
+ .footerCta{
+  color:white;
+  background-color: #CE1483 !important;
+  border-color: #CE1483 !important;
+  border-radius: 20px !important;
+ }
+
+ .footerCta:hover{
+  color: #CE1483 !important;
+  background-color: white !important;
+  border-color: #CE1483 !important;
+ }
+
+ #bottomNav{
+   height:100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction:column;
+ }
+
 #navbar{
   background-color: #F9EFEA !important;
 }
@@ -39,6 +81,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   color: #065143;
+  padding-bottom: 100px;
 }
 
 .splashContainer{
@@ -108,6 +151,10 @@
   border-color: #CE1483 !important;
 }
 
+.splashCtaIcon, .pageContentCtaIcon, .footerCtaIcon{
+  margin-bottom: 5px;
+}
+
 .pageContent{
   margin-top: 50px;
   font-family:"Roboto" sans-serif;
@@ -175,8 +222,11 @@ Light Green: #70B77E
 Pink: #F9EFEA
 Hot Pink: #CE1483
 
-Logo URL - Long: 
+Logo URL - Long Dark: 
 https://logomakr.com/7w8PHr
+
+Logo URL - Long Light:
+https://logomakr.com/7sJ2bH
 
 Logo URL - Really Short Vertical:
 https://logomakr.com/3bBMyx

@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {HashRouter as Router, Route} from "react-router-dom";
 import TopNav from "./components/TopNav.js";
+import BottomNav from "./components/BottomNav.js";
 import InfoPage from "./components/InfoPage.js";
 import * as AllPageContents from "./AllPageContents.js";
 import { FaCalendarAlt } from "react-icons/fa";
@@ -72,6 +73,7 @@ function App() {
               pageContentInfo={<p>coming soon...</p>}/>
           } 
       />
+      <BottomNav />
     </Router>
   );
 }

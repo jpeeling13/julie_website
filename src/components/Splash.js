@@ -10,7 +10,7 @@ class Splash extends Component {
 
     render() {
         const { highResImageLoaded } = this.state;  
-        let ctaIcon = React.createElement(this.props.ctaIcon, null);   
+        let ctaIcon = React.createElement(this.props.ctaIcon, {className: "splashCtaIcon"});   
         return (
             <div className="splashContainer">
               <img

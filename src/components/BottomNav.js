@@ -1,0 +1,25 @@
+import React, {Component} from "react";
+import { Button } from 'reactstrap';
+import {FaMailBulk, FaRegComment} from "react-icons/fa"
+
+class BottomNav extends Component {
+
+    render(){
+        return(
+
+            <footer>
+                <div id="bottomNav">
+                    <div>
+                        <img src="/jeast_hr_logo_full_light.ico"  style={{height: "50px"}}/>
+                        <Button className="footerCta"><FaRegComment className="footerCtaIcon" /> Contact</Button>
+                    </div>
+                    <div style={{color:"#F9EFEA", fontFamily:"Rubik"}}>
+                        <p style={{marginBottom:"0"}}>email: julieeast.com <span style={{margin:"0px 10px"}}>|</span> phone: 410-111-1111</p>
+                    </div>
+                </div>
+            </footer>
+        )
+    }
+}
+
+export default BottomNav;

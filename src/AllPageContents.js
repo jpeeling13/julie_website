@@ -4,14 +4,14 @@ import {FaInfo} from "react-icons/fa";
 
 export const HOME_PAGE_INFO = 
     <div>
-        <h4>What is Intention HR?</h4>
+        <h4>Why Intention HR?</h4>
         <p>Intention is a mental state that represents a commitment to carrying out an action or actions in the future. Great employee experiences don’t just happen.  But with intention, they can. Grow your business and get better results through your people, with Intention HR.</p>
         <br />
         <h4>Who is Julie East?</h4>
         <p>I am an HR expert with more than 25 years diverse HR leadership roles from family-owned to Fortune 500; comfortable and experienced in an environment that includes hourly and front line staff to the executive board room.  Adept at building relationships, collaborating with HR teams, and encouraging common sense and discretion to prevail in all employee and leadership matters. Expert project manager.</p>
         <p>Do you have an HR need but may not have the time or bandwidth to tackle the work?  I am here to help.</p>
         <div id="homepageLearnMoreBtn">
-            <Button className="pageContentCta" href="#/services_overview"><FaInfo /> Learn More</Button>
+            <Button className="pageContentCta" href="#/services_overview"><FaInfo className="pageContentCtaIcon" /> Learn More</Button>
         </div>
     </div>
 
