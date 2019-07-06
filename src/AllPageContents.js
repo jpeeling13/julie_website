@@ -21,3 +21,9 @@ export const TESTIMONIALS_PAGE_INFO =
         <br />
         <p>Another section starts...</p>
     </div>
+
+export const CONTACT_PAGE_INFO = 
+    <div>
+        <p>If you have questions, or would like more information, please contact us through the form. We will personally respond to you within 2 business days. Thank you!</p>
+        <br />
+    </div>

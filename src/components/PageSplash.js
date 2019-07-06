@@ -2,15 +2,18 @@ import React, {Component} from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import {Button} from "reactstrap";
 
-class Splash extends Component {
+class PageSplash extends Component {
 
     state = {
       highResImageLoaded: false
     }
 
     render() {
-        const { highResImageLoaded } = this.state;  
-        let ctaIcon = React.createElement(this.props.ctaIcon, {className: "splashCtaIcon"});   
+        const { highResImageLoaded } = this.state;
+        let ctaIcon;
+        if(this.props.ctaIcon){
+          ctaIcon = React.createElement(this.props.ctaIcon, {className: "splashCtaIcon"}); 
+        } 
         return (
             <div className="splashContainer">
               <img
@@ -39,8 +42,6 @@ class Splash extends Component {
             </div>
         )
     }
-
-
 }
 
-export default Splash;
+export default PageSplash;

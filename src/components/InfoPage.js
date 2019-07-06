@@ -1,14 +1,15 @@
 import React, {Component} from "react";
 import 'bootstrap/dist/css/bootstrap.css';
-import Splash from "./Splash";
+import PageSplash from "./PageSplash";
 import PageContent from "./PageContent";
 
 class InfoPage extends Component {
 
     render() {
+
         return (
             <div className="pageBody">
-                <Splash 
+                <PageSplash 
                     pageImage = {this.props.pageImage}
                     pageImageLowRes = {this.props.pageImageLowRes}
                     pageTitle = {this.props.pageTitle}

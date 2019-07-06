@@ -43,12 +43,15 @@ function App() {
               pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg" 
               pageTitle="Coming Soon..." 
               pageSubtitle="" 
+              pageContentTitle="Services Overview"
+              pageContentSubtitle=""
+              showCta={false}
               pageContentInfo={<p>coming soon...</p>}/>
           } 
       />
 
       <Route 
-        path="/Testimonials" exact 
+        path="/testimonials" exact 
         render=
           {
             (props) => <InfoPage 
@@ -70,8 +73,11 @@ function App() {
               pageImage="/splash_coffee_cup_cmp.jpg"
               pageImageLowRes="/splash_coffee_cup_cmp_low_res_1.jpg" 
               pageTitle="Contact" 
-              pageSubtitle="" 
-              pageContentInfo={<p>coming soon...</p>}/>
+              pageSubtitle=""
+              pageContentTitle="Contact"
+              pageContentSubtitle=""
+              showCta={false}
+              pageContentInfo={AllPageContents.CONTACT_PAGE_INFO}/>
           } 
       />
       <BottomNav />
