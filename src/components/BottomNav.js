@@ -9,7 +9,7 @@ class BottomNav extends Component {
 
             <footer>
                 <div id="bottomNav">
-                    <div>
+                    <div style={{marginBottom: "15px"}}>
                         <img src="/jeast_hr_logo_full_light.ico"  style={{height: "50px"}}/>
                         <Button className="footerCta"><FaRegComment className="footerCtaIcon" /> Contact</Button>
                     </div>

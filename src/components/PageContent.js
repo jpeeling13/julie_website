@@ -22,6 +22,7 @@ class PageContent extends Component {
 
                     <Col md="9" className="pageContentInfo">
                         {this.props.pageContentInfo}
+                        {this.props.children}
                     </Col>
                 </Row>
             </Container>

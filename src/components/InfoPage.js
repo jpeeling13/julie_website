@@ -23,7 +23,9 @@ class InfoPage extends Component {
                     pageContentTitle = {this.props.pageContentTitle}
                     pageContentSubtitle = {this.props.pageContentSubtitle}
                     pageContentInfo = {this.props.pageContentInfo}
-                />
+                >
+                    {this.props.children}
+                </PageContent>
             </div>
         )
     }

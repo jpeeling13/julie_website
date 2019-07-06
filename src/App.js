@@ -4,6 +4,7 @@ import {HashRouter as Router, Route} from "react-router-dom";
 import TopNav from "./components/TopNav.js";
 import BottomNav from "./components/BottomNav.js";
 import InfoPage from "./components/InfoPage.js";
+import ContactPage from "./components/ContactPage.js";
 import * as AllPageContents from "./AllPageContents.js";
 import { FaCalendarAlt } from "react-icons/fa";
 
@@ -64,7 +65,7 @@ function App() {
         path="/contact" exact 
         render=
           {
-            (props) => <InfoPage 
+            (props) => <ContactPage 
               {...props} 
               pageImage="/splash_coffee_cup_cmp.jpg"
               pageImageLowRes="/splash_coffee_cup_cmp_low_res_1.jpg" 
