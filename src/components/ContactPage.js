@@ -2,26 +2,28 @@ import React, {Component} from "react";
 import {Form, FormGroup, FormFeedback, Label, Input, Button} from "reactstrap";
 import InfoPage from "./InfoPage";
 import {FaTelegramPlane} from "react-icons/fa";
+import * as emailjs from "emailjs-com";
 
 class ContactPage extends Component {
 
     state = {
         contactFirstName:"",
         contactLastName: "",
+        contactCompanyName: "",
         contactEmail: "",
         contactPhoneNumber: "",
         contactMessage: "",
         validate: {
             firstNameState: "",
             lastNameState: "",
+            companyNameState: "",
             emailState: "",
             phoneNumberState: "",
-            messageState: ""
+            messageState: "",
         }
     }
 
     handleChange = async (event) => {
-        console.log("handling change");
         const { target } = event;
         const value = target.type === 'checkbox' ? target.checked : target.value;
         const { name } = target;
@@ -51,6 +53,14 @@ class ContactPage extends Component {
             this.state.validate.lastNameState = "has-danger";
         }
         
+        this.setState({
+            validate: this.state.validate
+        });
+    }
+
+    validateCompanyName = () => {
+        this.state.validate.companyNameState = "has-success";
+
         this.setState({
             validate: this.state.validate
         });
@@ -103,40 +113,60 @@ class ContactPage extends Component {
         // Test all the form values again before doing anything
         this.validateFirstName();
         this.validateLastName();
+        this.validateCompanyName();
         this.validateEmail();
         this.validatePhoneNumber();
         this.validateMessage();
 
         let allFieldsValid = true;
         for(var fieldState in this.state.validate){
-            console.log(fieldState + " = " + this.state.validate[fieldState]);
             if(this.state.validate[fieldState] == "has-danger"){
                 allFieldsValid = false;
             }
         }
 
         if(allFieldsValid){
-            console.log("okay, send email and then display success message");
+            emailjs.send
+            (
+                process.env.REACT_APP_EMAILJS_SERVICE_ID, 
+                process.env.REACT_APP_EMAILJS_WEB_CONTACT_TEMPLATE_ID, 
+                {
+                    contactFirstName: this.state.contactFirstName, 
+                    contactLastName: this.state.contactLastName,
+                    contactCompanyName: this.state.contactCompanyName,
+                    contactEmail: this.state.contactEmail,
+                    contactPhoneNumber: this.state.contactPhoneNumber,
+                    contactMessage: this.state.contactMessage
 
-            // reset all field values so customer can send another message
-            this.setState({
-                contactFirstName:"",
-                contactLastName: "",
-                contactEmail: "",
-                contactPhoneNumber: "",
-                contactMessage: "",
-                validate: {
-                    firstNameState: "",
-                    lastNameState: "",
-                    emailState: "",
-                    phoneNumberState: "",
-                    messageState: ""
-                }
+                }, 
+                process.env.REACT_APP_EMAILJS_USER_ID
+            )
+            .then(res  => {
+                // reset the recaptcha
+                window.grecaptcha.reset();
+                console.log("recaptcha was reset properly");
+
+                // reset all field values and display a success message
+                this.setState({
+                    contactFirstName:"",
+                    contactLastName: "",
+                    contactCompanyName: "",
+                    contactEmail: "",
+                    contactPhoneNumber: "",
+                    contactMessage: "",
+                    validate: {
+                        firstNameState: "",
+                        lastNameState: "",
+                        emailState: "",
+                        phoneNumberState: "",
+                        messageState: ""
+                    }
+                });
+            })
+            .catch(err => {
+                console.error('Failed to send feedback. Error: ', err);
+                // display error message
             });
-
-        }
-        else{
-            console.log("show error message, and make user fix issues first.");
         }
     }
 
@@ -182,6 +212,23 @@ class ContactPage extends Component {
                         />
                         <FormFeedback>
                             Last name required
+                        </FormFeedback>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="contactCompanyName"><b>Company Name (optional)</b></Label>
+                        <Input 
+                            type="text" 
+                            name="contactCompanyName" 
+                            id="contactCompanyName" 
+                            placeholder="Enter company name..."
+                            value={this.state.contactCompanyName}
+                            onChange={(e) => this.handleChange(e)}
+                            onBlur={() => this.validateCompanyName()} 
+                            valid={ this.state.validate.companyNameState === "has-success" }
+                            invalid={ this.state.validate.companyNameState === "has-danger" }
+                        />
+                        <FormFeedback>
+                            Enter your company name or leave blank
                         </FormFeedback>
                     </FormGroup>
                     <FormGroup>
@@ -236,7 +283,10 @@ class ContactPage extends Component {
                            Message required (minimum of 20 characters) 
                         </FormFeedback>
                     </FormGroup>
-                    <Button className="pageContentCta" disabled><FaTelegramPlane /> Coming Soon...</Button>
+                    <FormGroup>
+                        <div className="g-recaptcha" data-sitekey="6Lc6Ua0UAAAAAKRvfRzKKQcUvqJwZ5IMiqXaGQfg"></div>
+                    </FormGroup>
+                    <Button className="pageContentCta"><FaTelegramPlane /> Contact</Button>
                 </Form>
             </InfoPage>
         )
