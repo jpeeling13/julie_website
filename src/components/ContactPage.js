@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Form, FormGroup, FormFeedback, Label, Input, Button} from "reactstrap";
+import {Form, FormGroup, FormFeedback, Label, Input, Button, Alert} from "reactstrap";
 import ReCAPTCHA from "react-google-recaptcha";
 import InfoPage from "./InfoPage";
 import {FaTelegramPlane} from "react-icons/fa";
@@ -11,6 +11,8 @@ class ContactPage extends Component {
 
     state = {
         submitEnabled: false,
+        submitSuccessful: true,
+        showAlert: false,
         contactFirstName:"",
         contactLastName: "",
         contactCompanyName: "",
@@ -32,6 +34,12 @@ class ContactPage extends Component {
        this.setState({
            submitEnabled: true
        });
+    }
+
+    dismissAlert = () => {
+        this.setState({
+            showAlert: false
+        });
     }
 
     handleChange = async (event) => {
@@ -159,11 +167,19 @@ class ContactPage extends Component {
               });
 
             fakePromise.then(res  => {
+
+                // scroll to the top of the content on the page
+                document.getElementsByClassName("pageContentInfo")[0].scrollIntoView();
+
                 // Reset the recaptcha assuming the submit was successful and email was sent 
                 this.recaptchaRef.current.reset();
-            
+                
                 // reset all field values and display a success message
                 this.setState({
+                    
+                    submitEnabled: false,
+                    submitSuccessful: true,
+                    showAlert: true,
                     contactFirstName:"",
                     contactLastName: "",
                     contactCompanyName: "",
@@ -195,6 +211,17 @@ class ContactPage extends Component {
                 pageSubtitle={this.props.pageSubtitle}
                 pageContentInfo={this.props.pageContentInfo}
             >
+                <Alert 
+                    color={this.state.submitSuccessful ? "success" : "danger"}
+                    isOpen={this.state.showAlert}
+                    toggle={this.dismissAlert}
+                    id="formAlertMessage"
+                >
+                {this.state.submitSuccessful 
+                    ? <b>Thanks for contacting us! We will get back to you within 1 to 3 buisness days.</b>
+                    : <b>There was an error submitting your request. Please refresh the page and try again.</b>
+                }
+                </Alert>
                 <Form onSubmit={ (e) => this.submitForm(e) }>
                     <FormGroup>
                         <Label for="contactFirstName"><b>First Name</b></Label>
