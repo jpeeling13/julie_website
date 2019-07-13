@@ -187,6 +187,12 @@ footer {
   border-color: #129490 !important;
 }
 
+.pageContentCta:disabled{
+  background-color: #129490 !important;
+  color:white !important;
+  cursor: not-allowed;
+}
+
 #homepageLearnMoreBtn{
   text-align:right;
   margin-bottom: 15px;

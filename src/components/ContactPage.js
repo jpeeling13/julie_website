@@ -1,12 +1,16 @@
 import React, {Component} from "react";
 import {Form, FormGroup, FormFeedback, Label, Input, Button} from "reactstrap";
+import ReCAPTCHA from "react-google-recaptcha";
 import InfoPage from "./InfoPage";
 import {FaTelegramPlane} from "react-icons/fa";
 import * as emailjs from "emailjs-com";
 
 class ContactPage extends Component {
 
+    recaptchaRef = React.createRef();
+
     state = {
+        submitEnabled: false,
         contactFirstName:"",
         contactLastName: "",
         contactCompanyName: "",
@@ -21,6 +25,13 @@ class ContactPage extends Component {
             phoneNumberState: "",
             messageState: "",
         }
+    }
+
+    // enabled the submit button once the recaptcha has been successfully solved
+    submitEnabled = () => {
+       this.setState({
+           submitEnabled: true
+       });
     }
 
     handleChange = async (event) => {
@@ -126,26 +137,31 @@ class ContactPage extends Component {
         }
 
         if(allFieldsValid){
-            emailjs.send
-            (
-                process.env.REACT_APP_EMAILJS_SERVICE_ID, 
-                process.env.REACT_APP_EMAILJS_WEB_CONTACT_TEMPLATE_ID, 
-                {
-                    contactFirstName: this.state.contactFirstName, 
-                    contactLastName: this.state.contactLastName,
-                    contactCompanyName: this.state.contactCompanyName,
-                    contactEmail: this.state.contactEmail,
-                    contactPhoneNumber: this.state.contactPhoneNumber,
-                    contactMessage: this.state.contactMessage
+            // emailjs.send
+            // (
+            //     process.env.REACT_APP_EMAILJS_SERVICE_ID, 
+            //     process.env.REACT_APP_EMAILJS_WEB_CONTACT_TEMPLATE_ID, 
+            //     {
+            //         contactFirstName: this.state.contactFirstName, 
+            //         contactLastName: this.state.contactLastName,
+            //         contactCompanyName: this.state.contactCompanyName,
+            //         contactEmail: this.state.contactEmail,
+            //         contactPhoneNumber: this.state.contactPhoneNumber,
+            //         contactMessage: this.state.contactMessage
 
-                }, 
-                process.env.REACT_APP_EMAILJS_USER_ID
-            )
-            .then(res  => {
-                // reset the recaptcha
-                window.grecaptcha.reset();
-                console.log("recaptcha was reset properly");
+            //     }, 
+            //     process.env.REACT_APP_EMAILJS_USER_ID
+            // )
+            var fakePromise = new Promise((resolve, reject) => {
+                setTimeout(function() {
+                  resolve('foo');
+                }, 300);
+              });
 
+            fakePromise.then(res  => {
+                // Reset the recaptcha assuming the submit was successful and email was sent 
+                this.recaptchaRef.current.reset();
+            
                 // reset all field values and display a success message
                 this.setState({
                     contactFirstName:"",
@@ -186,7 +202,6 @@ class ContactPage extends Component {
                             type="text" 
                             name="contactFirstName" 
                             id="contactFirstName" 
-                            placeholder="Enter first name..." 
                             value={this.state.contactFirstName}
                             onChange={(e) => this.handleChange(e)}
                             onBlur={() => this.validateFirstName()} 
@@ -203,7 +218,6 @@ class ContactPage extends Component {
                             type="text" 
                             name="contactLastName" 
                             id="contactLastName" 
-                            placeholder="Enter last name..."
                             value={this.state.contactLastName}
                             onChange={(e) => this.handleChange(e)}
                             onBlur={() => this.validateLastName()} 
@@ -215,12 +229,12 @@ class ContactPage extends Component {
                         </FormFeedback>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="contactCompanyName"><b>Company Name (optional)</b></Label>
+                        <Label for="contactCompanyName"><b>Company Name</b></Label>
                         <Input 
                             type="text" 
                             name="contactCompanyName" 
                             id="contactCompanyName" 
-                            placeholder="Enter company name..."
+                            placeholder="optional..."
                             value={this.state.contactCompanyName}
                             onChange={(e) => this.handleChange(e)}
                             onBlur={() => this.validateCompanyName()} 
@@ -237,7 +251,6 @@ class ContactPage extends Component {
                             type="email" 
                             name="contactEmail" 
                             id="contactEmail" 
-                            placeholder="Enter contact email..."
                             value={this.state.contactEmail}
                             onChange={(e) => this.handleChange(e)}
                             onBlur={() => this.validateEmail()} 
@@ -249,12 +262,12 @@ class ContactPage extends Component {
                         </FormFeedback>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="phoneNumber"><b>Phone Number (optional)</b></Label>
+                        <Label for="phoneNumber"><b>Phone Number</b></Label>
                         <Input 
                             type="text"
                             name="contactPhoneNumber" 
                             id="contactPhoneNumber" 
-                            placeholder="Enter contact phone number..."
+                            placeholder="optional..."
                             value={this.state.contactPhoneNumber}
                             onChange={(e) => this.handleChange(e)}
                             onBlur={() => this.validatePhoneNumber()}
@@ -272,7 +285,6 @@ class ContactPage extends Component {
                             style={{height: 200}}
                             name="contactMessage"
                             id="contactMessage" 
-                            placeholder="Enter personal message..."
                             value={this.state.contactMessage}
                             onChange={(e) => this.handleChange(e)}
                             onBlur={() => this.validateMessage()}
@@ -284,9 +296,14 @@ class ContactPage extends Component {
                         </FormFeedback>
                     </FormGroup>
                     <FormGroup>
-                        <div className="g-recaptcha" data-sitekey="6Lc6Ua0UAAAAAKRvfRzKKQcUvqJwZ5IMiqXaGQfg"></div>
+                        <ReCAPTCHA 
+                            ref={this.recaptchaRef}
+                            sitekey="6Lc6Ua0UAAAAAKRvfRzKKQcUvqJwZ5IMiqXaGQfg"
+                            onChange = {this.submitEnabled}
+                        />
                     </FormGroup>
-                    <Button className="pageContentCta"><FaTelegramPlane /> Contact</Button>
+                    
+                    <Button className="pageContentCta" disabled={!this.state.submitEnabled}><FaTelegramPlane /> Contact</Button>
                 </Form>
             </InfoPage>
         )
