@@ -30,7 +30,7 @@ function App() {
               pageContentSubtitle=""
               showCta={true}
               ctaTitle="Schedule Consult"
-              ctaHref="#/contact"
+              ctaHref="/contact"
               ctaIcon= {FaCalendarAlt}
               pageContentInfo={AllPageContents.HOME_PAGE_INFO}/>
           } 
