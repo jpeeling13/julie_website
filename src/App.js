@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {HashRouter as Router, Route} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import TopNav from "./components/TopNav.js";
 import BottomNav from "./components/BottomNav.js";
