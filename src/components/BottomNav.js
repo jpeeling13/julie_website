@@ -5,6 +5,12 @@ import {FaMailBulk, FaRegComment} from "react-icons/fa"
 
 class BottomNav extends Component {
 
+    isOnContactPageAlready = () => {
+        if(this.props.location.pathname == "/contact"){
+            window.scrollTo(0, 0);
+        }
+    }
+
     render(){
         return(
 
@@ -12,7 +18,14 @@ class BottomNav extends Component {
                 <div id="bottomNav">
                     <div style={{marginBottom: "15px"}}>
                         <img src="/jeast_hr_logo_full_light.ico"  style={{height: "50px"}}/>
-                        <Button className="footerCta" tag={RRNavLink} to="/contact"><FaRegComment className="footerCtaIcon" /> Contact</Button>
+                        <Button 
+                            className="footerCta" 
+                            tag={RRNavLink} 
+                            to="/contact"
+                            onClick = {this.isOnContactPageAlready}
+                        >
+                            <FaRegComment className="footerCtaIcon" /> Contact
+                        </Button>
                     </div>
                     <div style={{color:"#F9EFEA", fontFamily:"Rubik"}}>
                         <p style={{marginBottom:"0"}}>email: julieeast.com <span style={{margin:"0px 10px"}}>|</span> phone: 410-111-1111</p>

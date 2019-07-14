@@ -13,8 +13,8 @@ function App() {
   return (
     <Router basename="/">
 
-      <Route component={ScrollToTop} />
-      <Route component={TopNav} />
+      <Route path="/" component={ScrollToTop} />
+      <Route path="/" component={TopNav} />
 
       <Route 
         path="/" exact 
@@ -83,7 +83,7 @@ function App() {
               pageContentInfo={AllPageContents.CONTACT_PAGE_INFO}/>
           } 
       />
-      <BottomNav />
+      <Route path="/" component={BottomNav} />
     </Router>
   );
 }

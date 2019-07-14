@@ -48,22 +48,24 @@ class TopNav extends Component {
 
     componentDidUpdate(prevProps, prevState) {
 
-        switch (this.props.location.pathname){
-            case "/services_overview":
-            case "employee_relations":
-            case "/training_and_learing":
-            case "/talent_mangement":
-            case "/strategy":
-            case "/engagement_expertise":
-            {
-                document.getElementById("servicesDropdown").className = "navLink nav-link activeNavLink";
-                break;
-            }
+      console.log("Pathname: " + this.props.location.pathname)
 
-            default:{
-                document.getElementById("servicesDropdown").className = "navLink nav-link";
-            }
-        }
+      switch (this.props.location.pathname){
+          case "/services_overview":
+          case "/employee_relations":
+          case "/training_and_learning":
+          case "/talent_management":
+          case "/strategy":
+          case "/engagement_expertise":
+          {
+              document.getElementById("servicesDropdown").className = "navLink nav-link activeNavLink";
+              break;
+          }
+
+          default:{
+              document.getElementById("servicesDropdown").className = "navLink nav-link";
+          }
+      }
         
     }
 
@@ -93,7 +95,7 @@ class TopNav extends Component {
                         <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/training_and_learning">Training & Learning</NavLink>
                       </DropdownItem>
                       <DropdownItem>
-                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/Talent Management">Talent Management</NavLink>
+                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/talent_management">Talent Management</NavLink>
                       </DropdownItem>
                       <DropdownItem>
                         <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/strategy">Strategy</NavLink>
