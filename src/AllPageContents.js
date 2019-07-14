@@ -11,7 +11,7 @@ export const HOME_PAGE_INFO =
         <p>I am an HR expert with more than 25 years diverse HR leadership roles from family-owned to Fortune 500; comfortable and experienced in an environment that includes hourly and front line staff to the executive board room.  Adept at building relationships, collaborating with HR teams, and encouraging common sense and discretion to prevail in all employee and leadership matters. Expert project manager.</p>
         <p>Do you have an HR need but may not have the time or bandwidth to tackle the work?  I am here to help.</p>
         <div id="homepageLearnMoreBtn">
-            <Button className="pageContentCta" href="#/services_overview"><FaInfo className="pageContentCtaIcon" /> Learn More</Button>
+            <Button className="pageContentCta" href="/services_overview"><FaInfo className="pageContentCtaIcon" /> Learn More</Button>
         </div>
     </div>
 
