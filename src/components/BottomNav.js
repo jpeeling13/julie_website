@@ -28,7 +28,7 @@ class BottomNav extends Component {
                         </Button>
                     </div>
                     <div style={{color:"#F9EFEA", fontFamily:"Rubik"}}>
-                        <p style={{marginBottom:"0"}}>email: julie@julieeast.com <span style={{margin:"0px 10px"}}>|</span> phone: 443-417-7542</p>
+                        <p className="footerContactInfo">email: julie@julieeast.com <span style={{margin:"0px 10px"}}>|</span> phone: 443-417-7542</p>
                     </div>
                 </div>
             </footer>

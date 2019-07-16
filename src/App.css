@@ -32,6 +32,19 @@ footer {
   border-color: #CE1483 !important;
  }
 
+ .footerContactInfo{
+   margin-bottom:0px;
+ }
+
+ @media(min-width : 320px) and (max-width : 480px){
+  .footerContactInfo{
+    margin-bottom: 0px;
+    display: block;
+    width: 55%;
+    margin: auto;
+   }
+ }
+
  #bottomNav{
    height:100%;
    display: flex;
