@@ -15,6 +15,47 @@ export const HOME_PAGE_INFO =
         </div>
     </div>
 
+export const SERVICES_OVERVIEW_PAGE_INFO = 
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia, ex sed tempus aliquet, orci diam iaculis lorem, id eleifend diam dui efficitur quam. Nulla a posuere lectus, et interdum nunc. In tincidunt rhoncus nisi vitae tincidunt. Sed tristique magna in sem molestie, sit amet sagittis dui ultrices. Nam leo metus, imperdiet sed aliquam ut, finibus quis elit. Maecenas vel gravida augue. Vivamus ex risus, bibendum et consectetur vitae, efficitur quis nibh. Nunc commodo at tellus dictum congue. Etiam sed erat dictum, pellentesque nulla cursus, pulvinar ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <br />
+    </div>
+
+export const EMPLOYEE_RELATIONS_PAGE_INFO = 
+    <div>
+        <p>Our employee relations services include employment compliance, policy design, high risk investigations and unemployment.</p>
+        <br />
+        <p>Contact us for more information!</p>
+    </div>
+
+export const TRAINING_AND_LEARNING_PAGE_INFO = 
+    <div>
+        <p>Our training and learning services include needs assessment, instructional design, facilitation/delivery and building workforce capability.</p>
+        <br />
+        <p>Contact us for more information!</p>
+    </div>
+
+export const TALENT_MANAGEMENT_PAGE_INFO = 
+    <div>
+        <p>Our talent management services include talent assessment, succession planning, leadership development, leadership coaching, performance management structure.</p>
+        <br />
+        <p>Contact us for more information!</p>
+    </div>
+
+export const STRATEGY_PAGE_INFO = 
+    <div>
+        <p>Our strategy services include business and HR strategy, short and long range planning, goal setting, project management.</p>
+        <br />
+        <p>Contact us for more information!</p>
+    </div>
+
+export const ENGAGEMENT_EXPERTISE_PAGE_INFO = 
+<div>
+    <p>Our engagement expertise services include employee surveys, focus groups, climate surveys, rewards & recognition, engagement programming.</p>
+    <br />
+    <p>Contact us for more information!</p>
+</div>
+
 export const TESTIMONIALS_PAGE_INFO = 
     <div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia, ex sed tempus aliquet, orci diam iaculis lorem, id eleifend diam dui efficitur quam. Nulla a posuere lectus, et interdum nunc. In tincidunt rhoncus nisi vitae tincidunt. Sed tristique magna in sem molestie, sit amet sagittis dui ultrices. Nam leo metus, imperdiet sed aliquam ut, finibus quis elit. Maecenas vel gravida augue. Vivamus ex risus, bibendum et consectetur vitae, efficitur quis nibh. Nunc commodo at tellus dictum congue. Etiam sed erat dictum, pellentesque nulla cursus, pulvinar ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>

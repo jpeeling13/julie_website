@@ -44,12 +44,97 @@ function App() {
               {...props} 
               pageImage="/splash_hand_shake_cmp.jpg"
               pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg" 
-              pageTitle="Coming Soon..." 
+              pageTitle="Services Overview" 
               pageSubtitle="" 
               pageContentTitle="Services Overview"
               pageContentSubtitle=""
               showCta={false}
-              pageContentInfo={<p>coming soon...</p>}/>
+              pageContentInfo={AllPageContents.SERVICES_OVERVIEW_PAGE_INFO}/>
+          } 
+      />
+
+      <Route 
+        path="/employee_relations" exact 
+        render=
+          {
+            (props) => <InfoPage 
+              {...props} 
+              pageImage="/splash_hand_shake_cmp.jpg"
+              pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg" 
+              pageTitle="Services" 
+              pageSubtitle="Employee Relations" 
+              pageContentTitle="Services"
+              pageContentSubtitle="Employee Relations"
+              showCta={false}
+              pageContentInfo={AllPageContents.EMPLOYEE_RELATIONS_PAGE_INFO}/>
+          } 
+      />
+
+      <Route 
+        path="/training_and_learning" exact 
+        render=
+          {
+            (props) => <InfoPage 
+              {...props} 
+              pageImage="/splash_hand_shake_cmp.jpg"
+              pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg" 
+              pageTitle="Services" 
+              pageSubtitle="Training and Learning" 
+              pageContentTitle="Services"
+              pageContentSubtitle="Training and Learning"
+              showCta={false}
+              pageContentInfo={AllPageContents.TRAINING_AND_LEARNING_PAGE_INFO}/>
+          } 
+      />
+
+      <Route 
+        path="/talent_management" exact 
+        render=
+          {
+            (props) => <InfoPage 
+              {...props} 
+              pageImage="/splash_hand_shake_cmp.jpg"
+              pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg" 
+              pageTitle="Services" 
+              pageSubtitle="Talent Management" 
+              pageContentTitle="Services"
+              pageContentSubtitle="Talent Management"
+              showCta={false}
+              pageContentInfo={AllPageContents.TALENT_MANAGEMENT_PAGE_INFO}/>
+          } 
+      />
+
+      <Route 
+        path="/strategy" exact 
+        render=
+          {
+            (props) => <InfoPage 
+              {...props} 
+              pageImage="/splash_hand_shake_cmp.jpg"
+              pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg" 
+              pageTitle="Services" 
+              pageSubtitle="Strategy" 
+              pageContentTitle="Services"
+              pageContentSubtitle="Strategy"
+              showCta={false}
+              pageContentInfo={AllPageContents.STRATEGY_PAGE_INFO}/>
+          } 
+      />
+
+      <Route 
+        path="/engagement_expertise" exact 
+        render=
+          {
+            (props) => <InfoPage 
+              {...props} 
+              pageImage="/splash_hand_shake_cmp.jpg"
+              pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg" 
+              pageTitle="Services" 
+              pageSubtitle="Engagement Expertise" 
+              pageContentTitle="Services"
+              pageContentSubtitle="Engagement Expertise"
+              showCta={false}
+              pageContentInfo={AllPageContents.ENGAGEMENT_EXPERTISE_PAGE_INFO}/>
           } 
       />
 
