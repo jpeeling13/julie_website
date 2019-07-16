@@ -219,6 +219,16 @@ footer {
   }
 }
 
+/* Define an animation behavior */
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}
+/* This is the class name given by the Font Awesome component when icon contains 'spinner' */
+.fa-spin {
+  /* Apply 'spinner' keyframes looping once every second (1s)  */
+  animation: spinner 2s linear infinite;
+}
+
 /* 
 App Pallette: https://coolors.co/065143-129490-70b77e-e0a890-ce1483
 

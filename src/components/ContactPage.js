@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {Form, FormGroup, FormFeedback, Label, Input, Button, Alert} from "reactstrap";
 import ReCAPTCHA from "react-google-recaptcha";
 import InfoPage from "./InfoPage";
-import {FaTelegramPlane} from "react-icons/fa";
+import {FaTelegramPlane, FaSpinner} from "react-icons/fa";
 import * as emailjs from "emailjs-com";
 
 class ContactPage extends Component {
@@ -11,6 +11,7 @@ class ContactPage extends Component {
 
     state = {
         submitEnabled: false,
+        submitProcessing: false,
         submitSuccessful: true,
         showAlert: false,
         contactFirstName:"",
@@ -128,6 +129,10 @@ class ContactPage extends Component {
 
     submitForm = (e) => {
         e.preventDefault();
+
+        this.setState({
+            submitProcessing: true
+        });
         
         // Test all the form values again before doing anything
         this.validateFirstName();
@@ -145,28 +150,30 @@ class ContactPage extends Component {
         }
 
         if(allFieldsValid){
-            // emailjs.send
-            // (
-            //     process.env.REACT_APP_EMAILJS_SERVICE_ID, 
-            //     process.env.REACT_APP_EMAILJS_WEB_CONTACT_TEMPLATE_ID, 
-            //     {
-            //         contactFirstName: this.state.contactFirstName, 
-            //         contactLastName: this.state.contactLastName,
-            //         contactCompanyName: this.state.contactCompanyName,
-            //         contactEmail: this.state.contactEmail,
-            //         contactPhoneNumber: this.state.contactPhoneNumber,
-            //         contactMessage: this.state.contactMessage
 
-            //     }, 
-            //     process.env.REACT_APP_EMAILJS_USER_ID
-            // )
-            var fakePromise = new Promise((resolve, reject) => {
-                setTimeout(function() {
-                  resolve('foo');
-                }, 300);
-              });
+            // let fakePromise = new Promise(function(resolve, reject) {
+            //     // the function is executed automatically when the promise is constructed
+              
+            //     // after 1 second signal that the job is done with the result "done"
+            //     setTimeout(() => resolve("done"), 1000);
+            //   });
 
-            fakePromise.then(res  => {
+            // Send email using emailjs API
+            emailjs.send
+            (
+                process.env.REACT_APP_EMAILJS_SERVICE_ID, 
+                process.env.REACT_APP_EMAILJS_WEB_CONTACT_TEMPLATE_ID, 
+                {
+                    contactFirstName: this.state.contactFirstName, 
+                    contactLastName: this.state.contactLastName,
+                    contactCompanyName: this.state.contactCompanyName,
+                    contactEmail: this.state.contactEmail,
+                    contactPhoneNumber: this.state.contactPhoneNumber,
+                    contactMessage: this.state.contactMessage
+
+                }, 
+                process.env.REACT_APP_EMAILJS_USER_ID
+            ).then(res  => {
 
                 // scroll to the top of the content on the page
                 document.getElementsByClassName("pageContentInfo")[0].scrollIntoView();
@@ -178,6 +185,7 @@ class ContactPage extends Component {
                 this.setState({
                     
                     submitEnabled: false,
+                    submitProcessing: false,
                     submitSuccessful: true,
                     showAlert: true,
                     contactFirstName:"",
@@ -198,6 +206,10 @@ class ContactPage extends Component {
             .catch(err => {
                 console.error('Failed to send feedback. Error: ', err);
                 // display error message
+
+                this.setState({
+                    submitProcessing: false
+                });
             });
         }
     }
@@ -330,7 +342,12 @@ class ContactPage extends Component {
                         />
                     </FormGroup>
                     
-                    <Button className="pageContentCta" disabled={!this.state.submitEnabled}><FaTelegramPlane /> Contact</Button>
+                    <Button className="pageContentCta" 
+                        disabled={!this.state.submitEnabled || this.state.submitProcessing }
+                    >
+                        {!this.state.submitProcessing ? <FaTelegramPlane /> : <FaSpinner className="fa-spin"/>}
+                        {' '}Contact
+                    </Button>
                 </Form>
             </InfoPage>
         )
