@@ -42,8 +42,8 @@ function App() {
           {
             (props) => <InfoPage 
               {...props} 
-              pageImage="/splash_hand_shake_cmp.jpg"
-              pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg" 
+              pageImage="/succulent_cmp.jpg"
+              pageImageLowRes="/succulent_cmp_low_res.jpg" 
               pageTitle="Services Overview" 
               pageSubtitle="" 
               pageContentTitle="Services Overview"
@@ -59,8 +59,8 @@ function App() {
           {
             (props) => <InfoPage 
               {...props} 
-              pageImage="/splash_hand_shake_cmp.jpg"
-              pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg" 
+              pageImage="/succulent_cmp.jpg"
+              pageImageLowRes="/succulent_cmp_low_res.jpg" 
               pageTitle="Services" 
               pageSubtitle="Employee Relations" 
               pageContentTitle="Services"
@@ -76,8 +76,8 @@ function App() {
           {
             (props) => <InfoPage 
               {...props} 
-              pageImage="/splash_hand_shake_cmp.jpg"
-              pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg" 
+              pageImage="/succulent_cmp.jpg"
+              pageImageLowRes="/succulent_cmp_low_res.jpg" 
               pageTitle="Services" 
               pageSubtitle="Training and Learning" 
               pageContentTitle="Services"
@@ -93,8 +93,8 @@ function App() {
           {
             (props) => <InfoPage 
               {...props} 
-              pageImage="/splash_hand_shake_cmp.jpg"
-              pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg" 
+              pageImage="/succulent_cmp.jpg"
+              pageImageLowRes="/succulent_cmp_low_res.jpg" 
               pageTitle="Services" 
               pageSubtitle="Talent Management" 
               pageContentTitle="Services"
@@ -110,8 +110,8 @@ function App() {
           {
             (props) => <InfoPage 
               {...props} 
-              pageImage="/splash_hand_shake_cmp.jpg"
-              pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg" 
+              pageImage="/succulent_cmp.jpg"
+              pageImageLowRes="/succulent_cmp_low_res.jpg" 
               pageTitle="Services" 
               pageSubtitle="Strategy" 
               pageContentTitle="Services"
@@ -127,8 +127,8 @@ function App() {
           {
             (props) => <InfoPage 
               {...props} 
-              pageImage="/splash_hand_shake_cmp.jpg"
-              pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg" 
+              pageImage="/succulent_cmp.jpg"
+              pageImageLowRes="/succulent_cmp_low_res.jpg" 
               pageTitle="Services" 
               pageSubtitle="Engagement Expertise" 
               pageContentTitle="Services"
