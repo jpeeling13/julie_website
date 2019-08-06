@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import { NavLink as RRNavLink } from 'react-router-dom';
+import { HashLink as RRHashLink } from 'react-router-hash-link';
 import {
     Collapse,
     Navbar,
@@ -89,19 +90,13 @@ class TopNav extends Component {
                         <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/services_overview" style={{fontWeight:"bold"}}>Overview</NavLink>
                       </DropdownItem>
                       <DropdownItem>
-                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/employee_relations">Employee Relations</NavLink>
+                        <NavLink tag={RRHashLink} className="navLink" activeClassName="activeNavLink" to="/services_overview#project_management">Project Management</NavLink>
                       </DropdownItem>
                       <DropdownItem>
-                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/training_and_learning">Training & Learning</NavLink>
+                        <NavLink tag={RRHashLink} className="navLink" activeClassName="activeNavLink" to="/services_overview#strategic_planning">Strategic Planning</NavLink>
                       </DropdownItem>
                       <DropdownItem>
-                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/talent_management">Talent Management</NavLink>
-                      </DropdownItem>
-                      <DropdownItem>
-                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/strategy">Strategy</NavLink>
-                      </DropdownItem>
-                      <DropdownItem>
-                        <NavLink tag={RRNavLink} className="navLink" activeClassName="activeNavLink" to="/engagement_expertise">Engagement Expertise</NavLink>
+                        <NavLink tag={RRHashLink} className="navLink" activeClassName="activeNavLink" to="/services_overview#engagement_and_retention">Engagement & Retention</NavLink>
                       </DropdownItem>
                     </DropdownMenu>
                   </Dropdown>
