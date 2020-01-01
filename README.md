@@ -1,6 +1,6 @@
 ## Julie's Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and is written to be a re-usable single page app for displaying static content. Think personal website, resume, etc. Once you clone this project, all you need to do is update the App.js and AllPageContent.js files to suit your needs. You can also add new pages.
 
 ## Available Scripts
 
@@ -14,11 +14,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.<br>
@@ -29,42 +24,25 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+**Note: Remember to set the local environment variables or the contact page won't work!**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This project has an integration to Mailgun and the expected local environment keys need to be set for the "Contact" page to work properly. 
+You will need to add your own environment variables that match your own Mailgun account settings so that it works for you.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Useful links
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### How to send email from React without a backend using EmailJs
+https://sheelahb.com/blog/how-to-send-email-from-react-without-a-backend/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Use Mailgun to send emails
+https://www.dannyguo.com/blog/using-mailgun-for-a-free-custom-domain-email-address/
 
-## Learn More
+### Progressive Image Loading Effect (think Instagram)
+https://www.cssscript.com/progressive-image-loading-pure-css/
+https://codeburst.io/how-to-do-simple-progressive-image-loading-in-react-like-medium-dfad4c181b53
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Create forms with inline error handling - Fancy Forms
+https://alligator.io/react/fancy-forms-reactstrap/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Set up Google reCAPTCHA
+https://www.npmjs.com/package/react-google-recaptcha
