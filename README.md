@@ -1,6 +1,6 @@
 ## Julie's Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and is written to be a re-usable single page app for displaying static content. Think personal website, resume, etc. Once you clone this project, all you need to do is update the App.js and AllPageContent.js files to suit your needs. You can also add new pages.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and is written to be a re-usable single page app for displaying static content. Think personal website, resume, etc. Once you clone this project, all you need to do is update the App.js and AllPageContent.js files to suit your needs. You can also add new pages. Go to https://julieeast.com for a live example of the code.
 
 ## Available Scripts
 
