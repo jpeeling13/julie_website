@@ -86,6 +86,10 @@ footer {
   color: white !important;
 }
 
+#contactPageCtaWrapper{
+  margin-top:20px;
+}
+
 .pageBody {
   background-color: #F9EFEA;
   min-height: 100vh;
@@ -229,6 +233,14 @@ footer {
 
   .splashContainer{
     height:300px;
+  }
+
+  .pageContentTitle{
+    padding-right:0px;
+  }
+
+  #contactPageCtaWrapper{
+    text-align:center;
   }
 }
 

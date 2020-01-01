@@ -1,6 +1,6 @@
 import React from "react";
-import {Button} from "reactstrap";
-import {FaInfo} from "react-icons/fa";
+import {Button, Row, Col} from "reactstrap";
+import {FaInfo, FaRegUser, FaLinkedinIn} from "react-icons/fa";
 
 export const HOME_PAGE_INFO = 
     <div>
@@ -95,9 +95,93 @@ export const SERVICES_OVERVIEW_PAGE_INFO =
 
 export const TESTIMONIALS_PAGE_INFO = 
     <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia, ex sed tempus aliquet, orci diam iaculis lorem, id eleifend diam dui efficitur quam. Nulla a posuere lectus, et interdum nunc. In tincidunt rhoncus nisi vitae tincidunt. Sed tristique magna in sem molestie, sit amet sagittis dui ultrices. Nam leo metus, imperdiet sed aliquam ut, finibus quis elit. Maecenas vel gravida augue. Vivamus ex risus, bibendum et consectetur vitae, efficitur quis nibh. Nunc commodo at tellus dictum congue. Etiam sed erat dictum, pellentesque nulla cursus, pulvinar ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-        <br />
-        <p>Another section starts...</p>
+            <Row style={{textAlign:"center"}}>
+                <Col md="3">
+                        <FaRegUser style={{fontSize:30, marginBottom:"10px"}}/>
+                        <p>GINA BRELESKY</p>
+                        <p style={{fontSize:11, fontStyle:"italic"}}>Author I Leadership Coach I Learning & Development Leader <br/><br/> October 23, 2017, GINA reported directly to Julie
+                        </p>
+                </Col>
+                <Col md="9">
+                    <div class="testimonial-body">
+                        <p>
+                            "In the almost two years Julie and I have worked together we have functioned as a true partnership. Julie is an influential leader who has inspired me to bring my very best to our company. Her expertise in setting direction, laying out strategy, and actualizing results has moved our HR department and company forward by leaps and bounds! Julie is the quintessential professional with a deep understanding of people and process. Her optimistic nature, attention to detail, and willingness to challenge herself and others has made a tremendous impact. She has created policies that make sense and drive business results, and her coaching and development of leaders has led to greater accountability. Working with Julie is a true pleasure and I am grateful for the knowledge and expertise she shares each day!"
+                        </p>
+                    </div>
+                </Col>
+            </Row>
+            <hr  style={{
+                    color: '#065143',
+                    backgroundColor: '#065143',
+                    height: .1,
+                    borderColor : '#065143',
+                    marginTop: "50px",
+                    marginBottom:"50px"
+                }}/>
+            <Row style={{textAlign:"center"}}>
+                <Col md="9">
+                    <div class="testimonial-body">
+                        <p>
+                            "I had the pleasure of working as peers with Julie East for several years in the Global Employee Relations department within Gap Inc. Julie was a valued team member who always displayed absolute integrity and professionalism in everything she did. She has a solid foundation in employee relations/human resources and was methodical and pragmatic in her approach. Julie also displayed her keen project management skills by successfully leading several projects to completion on time and within budget. Julie would be an asset to any organization!"
+                        </p>
+                    </div>
+                </Col>
+                <Col md="3">
+                        <FaRegUser style={{fontSize:30, marginBottom:"10px"}}/>
+                        <p>LORI SHIELDS, SPHR</p>
+                        <p style={{fontSize:11, fontStyle:"italic"}}>Director, Global Employee Relations at Gap Inc. <br/><br/> April 7, 2015, Lori worked with Julie in different groups</p>
+                </Col>
+            </Row>
+            <hr  style={{
+                    color: '#065143',
+                    backgroundColor: '#065143',
+                    height: .1,
+                    borderColor : '#065143',
+                    marginTop: "50px",
+                    marginBottom:"50px"
+                }}/>
+            <Row style={{textAlign:"center"}}>
+                <Col md="3">
+                        <FaRegUser style={{fontSize:30, marginBottom:"10px"}}/>
+                        <p>SANDY HAYES</p>
+                        <p style={{fontSize:11, fontStyle:"italic"}}>Visionary Leader <br/><br/> February 22, 2015, Julie worked with Sandy in the same group
+                        </p>
+                </Col>
+                <Col md="9">
+                    <div class="testimonial-body">
+                        <p>
+                            "I have had the opportunity to work with Julie twice in my career most recently at Lane Bryant and years earlier when we were both at the Gap organization. Julie is a smart passionate trusted knowledgeable HR professional . This does not begin to describe what Julie beings to the table. Julie's experience and knowledge in all aspects of learning and development and HR allows her to identify HR solutions that not only mitigate risk but build a stronger foundation of policies and programs that develop talent and promote high employee engagement. Julie's ability to influence and coach at all levels allows her to be a strong collaborative partner and influence all levels of an organization. I would consider yourself incredibly fortunate if you have Julie as part of your organization."
+                        </p>
+                    </div>
+                </Col>
+            </Row>
+            <hr  style={{
+                    color: '#065143',
+                    backgroundColor: '#065143',
+                    height: .1,
+                    borderColor : '#065143',
+                    marginTop: "50px",
+                    marginBottom:"50px"
+                }}/>
+            <Row style={{textAlign:"center"}}>
+                <Col md="9">
+                    <div class="testimonial-body">
+                        <p>
+                            "Julie is a true business leader who drives organizational objectives and impacts the bottom line through strong business acumen, an excellent ability to influence leaders and her deep and well-rounded HR capability. Julie is one of the most talented and well-respected professionals I know and I had the pleasure of working with her over the course of many years at Gap Inc. both as a business partner and on my team. I always sought out Julie as a thought partner on challenging issues and relied on her to develop and lead major projects and organizational change initiatives; her contribution always raised the level of thinking and quality of work. I would welcome Julie back on my team anytime!"
+                        </p>
+                    </div>
+                </Col>
+                <Col md="3">
+                        <FaRegUser style={{fontSize:30, marginBottom:"10px"}}/>
+                        <p>DENISE KULIKOWSKY</p>
+                        <p style={{fontSize:11, fontStyle:"italic"}}>Chief Human Resources Officer at Party City Holdings, L.L.C. <br/><br/> January 30, 2015, Denise was senior to Julie but didn’t manage directly</p>
+                </Col>
+            </Row>
+            <Row>
+                <Col md="12" id="contactPageCtaWrapper">
+                    <Button className="pageContentCta" href="https://www.linkedin.com/in/jeast4211/"><FaLinkedinIn style={{marginBottom:"3px"}}/> See All Testimonials</Button>
+                </Col>
+            </Row>
     </div>
 
 export const CONTACT_PAGE_INFO = 

@@ -44,9 +44,9 @@ function App() {
               {...props} 
               pageImage="/succulent_cmp.jpg"
               pageImageLowRes="/succulent_cmp_low_res.jpg" 
-              pageTitle="Services Overview" 
+              pageTitle="Services" 
               pageSubtitle="" 
-              pageContentTitle="Services Overview"
+              pageContentTitle="Services"
               pageContentSubtitle=""
               showCta={false}
               pageContentInfo={AllPageContents.SERVICES_OVERVIEW_PAGE_INFO}/>
@@ -61,7 +61,8 @@ function App() {
               pageImage="/splash_hand_shake_cmp.jpg"
               pageImageLowRes="/splash_hand_shake_cmp_low_res_1.jpg"  
               pageTitle="Testimonials" 
-              pageSubtitle="" 
+              pageSubtitle=""
+              pageContentTitle="Testimonials" 
               pageContentInfo={AllPageContents.TESTIMONIALS_PAGE_INFO}/>
           } 
       /> 
